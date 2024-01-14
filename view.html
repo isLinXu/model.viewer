@@ -11,7 +11,7 @@
         const modelName = urlParams.get('model');
 
         if (modelName) {
-            const modelUrl = `https://isLinXu.github.io/model.viewer/onnx_model/${modelName}`;
+            const modelUrl = `https://isLinXu.github.io/models-house/onnx/${modelName}`;
             document.getElementById('netron').src = `https://netron.app?url=${modelUrl}&embed=1`;
         } else {
             document.getElementById('netron').src = "https://netron.app";
