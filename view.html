@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Viewer</title>
+</head>
+<body>
+    <h1>Model Viewer</h1>
+    <iframe id="netron" src="" width="100%" height="800px"></iframe>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const modelName = urlParams.get('model');
+
+        if (modelName) {
+            const modelUrl = `https://isLinXu.github.io/model.viewer/onnx_model/${modelName}`;
+            document.getElementById('netron').src = `https://netron.app?url=${modelUrl}&embed=1`;
+        } else {
+            document.getElementById('netron').src = "https://netron.app";
+        }
+    </script>
+</body>
+</html>
